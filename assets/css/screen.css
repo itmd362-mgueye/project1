@@ -1,22 +1,31 @@
+/*
+    https://www.modularscale.com/?1&em&1.25
+    Major Third
+*/
+
 html, body{
     height: 100%;
 }
 
 body{
-    background-image: url("../images/homepage.png");
+    background-image: url("../images/homepage-800.png");
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 800px) {
     body{
         background-image: url("../images/homepage-1200.png");
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 1200px) {
     body{
-        background-image: url("../images/homepage-800.png");
+        background-image: url("../images/homepage.png");
+    }
+    .check-input li{
+        padding-right: 7.5em;
     }
 }
 
@@ -41,7 +50,7 @@ body{
 }
 
 .sign-in h2{
-    font-size: 1.4em;
+    font-size: 1.563em; /* Modular Scale */
     width: max-content;
     padding: 0 0 1em 0;
     margin: 0 auto;
@@ -58,7 +67,8 @@ body{
 }
 
 .text-input li label{
-    font-size: 1.2em;
+    font-size: 1.25em; /* Modular Scale */
+    font-weight: 300;
     padding-bottom: 0.3em;
 }
 
@@ -82,11 +92,15 @@ body{
     padding-bottom: 0.7em;
 }
 
-input[type="button"], input[type="checkbox"]{
+.check-input input, .check-input label{
+    font-size: 0.8em;
+}
+
+button, input[type="checkbox"]{
     cursor: pointer;
 }
 
-input[name="submit"]{
+button{
     background-color: #6381bc;
     border: 0;
     border-radius: 0.2em;

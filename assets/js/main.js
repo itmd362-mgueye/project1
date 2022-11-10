@@ -1,5 +1,5 @@
 const form = document.querySelector(".sign-in") // form element
-const submitButton = document.querySelector(".sign-in input[type='button']") // Submit Button
+const submitButton = document.querySelector(".sign-in button") // Submit Button
 const error = document.querySelectorAll(".error") // All error paragraphs
 const overlay = document.querySelector(".overlay") // Get the parent element of the form
 
@@ -13,7 +13,8 @@ for(const element of error){
     errorElements[element.id] = element // Keep all elements in the error Element object and use element id as key
 }
 
-const ValidateForm = () => { // Create a function to validateForm
+const ValidateForm = (e) => { // Create a function to validateForm
+    e.preventDefault()
     let noError = true // If noError is true by the end of this then all the conditions were met
     if(formElements["full-name"].value === ""){ // Check for each condition
         errorElements["full-name-error"].innerText = "Please enter your Full Name" // Create a descriptive error if condition is not met

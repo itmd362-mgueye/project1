@@ -4,8 +4,12 @@
     <title>Project 1</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="assets/css/reset.css" rel="stylesheet" media="screen">
+    <link href="assets/css/meyers_and_normalize-form_reset.css" rel="stylesheet" media="screen">
     <link href="assets/css/screen.css" rel="stylesheet" media="screen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="assets/js/main.js" async></script>
 </head>
 <body>
 <header>
@@ -13,7 +17,7 @@
 </header>
 <main>
     <section class="overlay">
-        <form class="sign-in">
+        <form class="sign-in" method="get" action="#null" autocomplete="on">
             <!-- Full Name, Username, Email, Password, Marketing email checkbox, Terms of use checkbox -->
             <h2>Sign Up</h2>
             <ul class="text-input">
@@ -49,13 +53,12 @@
                     <p class="error" id="terms-error"></p>
                 </li>
             </ul>
-            <input type="button" name="submit" value="Create Account">
+            <button>Create Account</button>
         </form>
     </section>
 </main>
 <footer>
 
 </footer>
-<script src="assets/js/main.js"></script>
 </body>
 </html>
